@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_diamond_excavator": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "item": "excavatorsandhammers:diamond_excavator" }]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "excavatorsandhammers:diamond_excavator_smelting"
+      }
+    }
+  },
+  "requirements": [["has_diamond_excavator", "has_the_recipe"]],
+  "rewards": {
+    "recipes": ["excavatorsandhammers:diamond_excavator_smelting"]
+  }
+}

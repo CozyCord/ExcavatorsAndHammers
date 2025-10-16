@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " CC",
+    " SC",
+    "S  "
+  ],
+  "key": {
+    "C": { "item": "minecraft:cobblestone" },
+    "S": { "item": "minecraft:stick" }
+  },
+  "result": { "item": "excavatorsandhammers:stone_excavator" }
+}

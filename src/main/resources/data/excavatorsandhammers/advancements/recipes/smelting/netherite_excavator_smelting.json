@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_netherite_excavator": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "item": "excavatorsandhammers:netherite_excavator" }]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "excavatorsandhammers:netherite_excavator_smelting"
+      }
+    }
+  },
+  "requirements": [["has_netherite_excavator", "has_the_recipe"]],
+  "rewards": {
+    "recipes": ["excavatorsandhammers:netherite_excavator_smelting"]
+  }
+}

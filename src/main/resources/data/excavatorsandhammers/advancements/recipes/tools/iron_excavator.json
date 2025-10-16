@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "item": "minecraft:iron_ingot" }]
+      }
+    },
+    "has_stick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "item": "minecraft:stick" }]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "excavatorsandhammers:iron_excavator"
+      }
+    }
+  },
+  "requirements": [
+    ["has_iron", "has_stick", "has_the_recipe"]
+  ],
+  "rewards": {
+    "recipes": ["excavatorsandhammers:iron_excavator"]
+  }
+}

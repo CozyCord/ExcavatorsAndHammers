@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_gold_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "item": "minecraft:gold_ingot" }]
+      }
+    },
+    "has_stick": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "item": "minecraft:stick" }]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "excavatorsandhammers:golden_excavator"
+      }
+    }
+  },
+  "requirements": [
+    ["has_gold_ingot", "has_stick", "has_the_recipe"]
+  ],
+  "rewards": {
+    "recipes": ["excavatorsandhammers:golden_excavator"]
+  }
+}

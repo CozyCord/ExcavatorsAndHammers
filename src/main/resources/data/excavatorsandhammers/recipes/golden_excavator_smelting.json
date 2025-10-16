@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "excavatorsandhammers:golden_excavator"
+  },
+  "result": "minecraft:gold_ingot",
+  "experience": 0.1,
+  "cookingtime": 200
+}

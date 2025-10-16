@@ -1,0 +1,29 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_netherite": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "item": "minecraft:netherite_ingot" }]
+      }
+    },
+    "has_diamond_excavator": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "item": "excavatorsandhammers:diamond_excavator" }]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "excavatorsandhammers:netherite_excavator"
+      }
+    }
+  },
+  "requirements": [
+    ["has_netherite", "has_diamond_excavator", "has_the_recipe"]
+  ],
+  "rewards": {
+    "recipes": ["excavatorsandhammers:netherite_excavator"]
+  }
+}
