@@ -1,5 +1,6 @@
 package net.cozystudios.excavatorsandhammers.item;
 
+import net.cozystudios.excavatorsandhammers.util.LastBreakData;
 import net.minecraft.block.BlockState;
 import net.minecraft.entity.LivingEntity;
 import net.minecraft.item.ItemStack;
@@ -9,11 +10,9 @@ import net.minecraft.registry.tag.BlockTags;
 import net.minecraft.server.network.ServerPlayerEntity;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
-import net.minecraft.util.math.Vec3d;
 import net.minecraft.world.World;
 
 public class HammerItem extends PickaxeItem {
-    // Prevent recursive breaking loops
     private static boolean isHammering = false;
 
     public HammerItem(ToolMaterial material, float attackDamage, float attackSpeed, Settings settings) {
@@ -35,11 +34,8 @@ public class HammerItem extends PickaxeItem {
         try {
             isHammering = true;
 
-            // Determine face direction based on look vector
-            Vec3d lookVec = miner.getRotationVec(1.0F);
-            Direction face = getClosestFace(lookVec);
+            Direction face = LastBreakData.getFace(serverPlayer);
 
-            // Break a 3×3 plane relative to the face
             for (int dx = -1; dx <= 1; dx++) {
                 for (int dy = -1; dy <= 1; dy++) {
                     if (dx == 0 && dy == 0) continue;
@@ -50,29 +46,17 @@ public class HammerItem extends PickaxeItem {
                     if (targetState.isAir()) continue;
                     if (!targetState.isIn(BlockTags.PICKAXE_MINEABLE)) continue;
                     if (targetState.getHardness(world, targetPos) < 0) continue;
+                    ItemStack held = miner.getMainHandStack();
+                    if (!held.isSuitableFor(targetState)) continue;
 
                     serverPlayer.interactionManager.tryBreakBlock(targetPos);
                 }
             }
-
         } finally {
             isHammering = false;
         }
 
         return result;
-    }
-
-    private Direction getClosestFace(Vec3d look) {
-        Direction best = Direction.NORTH;
-        double bestDot = -1.0;
-        for (Direction dir : Direction.values()) {
-            double dot = look.dotProduct(Vec3d.of(dir.getVector()));
-            if (dot > bestDot) {
-                bestDot = dot;
-                best = dir;
-            }
-        }
-        return best;
     }
 
     private BlockPos getOffsetPos(BlockPos origin, Direction face, int xOffset, int yOffset) {

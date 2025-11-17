@@ -6,7 +6,7 @@
     "S  "
   ],
   "key": {
-    "W": { "item": "minecraft:planks" },
+    "W": { "tag": "minecraft:planks" },
     "S": { "item": "minecraft:stick" }
   },
   "result": { "item": "excavatorsandhammers:wooden_excavator" }

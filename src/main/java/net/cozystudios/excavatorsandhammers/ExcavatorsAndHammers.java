@@ -1,14 +1,17 @@
 package net.cozystudios.excavatorsandhammers;
 
 import net.cozystudios.excavatorsandhammers.registry.ModItems;
+import net.cozystudios.excavatorsandhammers.util.LastBreakData;
 import net.fabricmc.api.ModInitializer;
 
+import net.fabricmc.fabric.api.event.player.AttackBlockCallback;
 import net.fabricmc.fabric.api.itemgroup.v1.FabricItemGroup;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.text.Text;
+import net.minecraft.util.ActionResult;
 import net.minecraft.util.Identifier;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -20,6 +23,12 @@ public class ExcavatorsAndHammers implements ModInitializer {
 	@Override
 	public void onInitialize() {
 		LOGGER.info("ExcavatorsAndHammers Initialized!");
+
+            AttackBlockCallback.EVENT.register((player, world, hand, pos, direction) -> {
+                LastBreakData.setFace(player, direction);
+                return ActionResult.PASS;
+            });
+
         ModItems.registerItems();
 	}
 

@@ -5,10 +5,10 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.item.Items;
 
 public enum ModToolMaterials implements ToolMaterial {
-    WOOD(650, 4.0f, 1.0f, 0, 10, Ingredient.ofItems(Items.OAK_PLANKS)),
-    STONE(1250, 5.0f, 1.5f, 1, 8, Ingredient.ofItems(Items.COBBLESTONE)),
-    IRON(1950, 6.0f, 2.0f, 2, 14, Ingredient.ofItems(Items.IRON_INGOT)),
-    GOLD(50, 12.0f, 1.0f, 1, 4, Ingredient.ofItems(Items.GOLD_INGOT)),
+    WOOD(250, 4.0f, 1.0f, 0, 10, Ingredient.ofItems(Items.OAK_PLANKS)),
+    STONE(600, 5.0f, 1.5f, 1, 8, Ingredient.ofItems(Items.COBBLESTONE)),
+    IRON(1250, 6.0f, 2.0f, 2, 14, Ingredient.ofItems(Items.IRON_INGOT)),
+    GOLD(65, 12.0f, 1.0f, 1, 4, Ingredient.ofItems(Items.GOLD_INGOT)),
     DIAMOND(2850, 8.0f, 2.5f, 3, 10, Ingredient.ofItems(Items.DIAMOND)),
     NETHERITE(6500, 9.0f, 3.0f, 4, 15, Ingredient.ofItems(Items.NETHERITE_INGOT));
 
