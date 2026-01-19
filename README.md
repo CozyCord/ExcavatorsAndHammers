@@ -13,7 +13,7 @@
 <table align="center" style="width: 100%;">
   <tr>
     <td align="center" style="width: 33%;">
-      <a href="https://github.com/CozyCord/ExcavatorsAndHammers/wiki">Read Wiki</a>
+      <a href="https://cozystudios.org/excavatorsandhammers/intro/">Read Wiki</a>
     </td>
     <td align="center" style="width: 33%;">
       <a href="https://github.com/CozyCord/ExcavatorsAndHammers/issues">Report Issues / Make Feature Requests</a>
