@@ -11,5 +11,7 @@
   "item.excavatorsandhammers.iron_hammer": "Iron Hammer",
   "item.excavatorsandhammers.golden_hammer": "Golden Hammer",
   "item.excavatorsandhammers.diamond_hammer": "Diamond Hammer",
-  "item.excavatorsandhammers.netherite_hammer": "Netherite Hammer"
+  "item.excavatorsandhammers.netherite_hammer": "Netherite Hammer",
+  "item.excavatorsandhammers.obsidian_excavator": "Obsidian Excavator",
+  "item.excavatorsandhammers.obsidian_hammer": "Obsidian Hammer"
 }

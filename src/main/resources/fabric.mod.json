@@ -1,9 +1,9 @@
 {
 	"schemaVersion": 1,
-	"id": "excavatorsandhammers",
+	"id": "${id}",
 	"version": "${version}",
-	"name": "Excavators And Hammers",
-	"description": "This is a mod that adds Excavators and Hammers!",
+	"name": "${name}",
+	"description": "${description}",
 	"authors": [
 		"Tokimi",
         "CozyStudios"
@@ -20,25 +20,25 @@
 	"environment": "*",
 	"entrypoints": {
 		"main": [
-          "net.cozystudios.excavatorsandhammers.ExcavatorsAndHammers"
+          "${group}.ExcavatorsAndHammers"
 		],
 		"client": [
-          "net.cozystudios.excavatorsandhammers.ExcavatorsAndHammersClient"
+          "${group}.ExcavatorsAndHammersClient"
 		],
 		"fabric-datagen": [
-          "net.cozystudios.excavatorsandhammers.ExcavatorsAndHammersDataGenerator"
+          "${group}.ExcavatorsAndHammersDataGenerator"
 		]
 	},
 	"mixins": [
       "excavatorsandhammers.mixins.json"
 	],
 	"depends": {
-		"fabricloader": ">=0.17.2",
-		"minecraft": "~1.20.1",
+		"fabricloader": ">=0.18.4",
+		"minecraft": ">=${minecraftVersion}",
 		"java": ">=17",
 		"fabric-api": "*"
 	},
 	"suggests": {
-		"another-mod": "*"
+		"obsidianequipmentrework": "*"
 	}
 }

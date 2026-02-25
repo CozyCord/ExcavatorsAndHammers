@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " DD",
+    " SD",
+    "S  "
+  ],
+  "key": {
+    "D": "minecraft:diamond",
+    "S": "minecraft:stick"
+  },
+  "result": { "id": "excavatorsandhammers:diamond_excavator", "count": 1 }
+}

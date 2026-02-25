@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " GG",
+    " SG",
+    "S  "
+  ],
+  "key": {
+    "G": "minecraft:gold_ingot",
+    "S": "minecraft:stick"
+  },
+  "result": { "id": "excavatorsandhammers:golden_excavator", "count": 1 }
+}

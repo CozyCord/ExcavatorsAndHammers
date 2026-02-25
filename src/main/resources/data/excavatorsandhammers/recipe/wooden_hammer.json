@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "WWW",
+    "WSW",
+    " S "
+  ],
+  "key": {
+    "W": "#minecraft:planks",
+    "S": "minecraft:stick"
+  },
+  "result": { "id": "excavatorsandhammers:wooden_hammer", "count": 1 }
+}

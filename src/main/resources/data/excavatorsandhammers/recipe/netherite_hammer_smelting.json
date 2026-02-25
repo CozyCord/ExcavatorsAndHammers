@@ -1,0 +1,7 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": "excavatorsandhammers:netherite_hammer",
+  "result": { "id": "minecraft:netherite_scrap", "count": 1 },
+  "experience": 0.1,
+  "cookingtime": 200
+}

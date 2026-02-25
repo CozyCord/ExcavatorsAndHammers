@@ -1,15 +1,22 @@
 package net.cozystudios.excavatorsandhammers;
 
+//? if <1.21.11 {
 import net.cozystudios.excavatorsandhammers.item.ExcavatorItem;
 import net.cozystudios.excavatorsandhammers.item.HammerItem;
+//?}
 import net.fabricmc.api.ClientModInitializer;
+//? if <1.21.11 {
 import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderContext;
 import net.fabricmc.fabric.api.client.rendering.v1.WorldRenderEvents;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.Camera;
 import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.VertexConsumerProvider;
+//? if <1.21.2 {
 import net.minecraft.client.render.WorldRenderer;
+//?} else {
+/*import net.minecraft.client.render.debug.DebugRenderer;
+*///?}
 import net.minecraft.client.util.math.MatrixStack;
 import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.hit.HitResult;
@@ -18,25 +25,26 @@ import net.minecraft.util.math.Direction;
 import net.minecraft.util.math.Vec3d;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.World;
+//?}
 
 public class ExcavatorsAndHammersClient implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-
+        //? if <1.21.11 {
         WorldRenderEvents.AFTER_TRANSLUCENT.register(this::renderAOEOutline);
+        //?}
     }
 
+    //? if <1.21.11 {
     private void renderAOEOutline(WorldRenderContext context) {
         MinecraftClient client = MinecraftClient.getInstance();
         if (client.player == null || client.world == null) return;
-
 
         if (!(client.player.getMainHandStack().getItem() instanceof ExcavatorItem
                 || client.player.getMainHandStack().getItem() instanceof HammerItem)) {
             return;
         }
-
 
         if (client.crosshairTarget == null || client.crosshairTarget.getType() != HitResult.Type.BLOCK)
             return;
@@ -71,7 +79,7 @@ public class ExcavatorsAndHammersClient implements ClientModInitializer {
                 VoxelShape shape = world.getBlockState(targetPos).getOutlineShape(world, targetPos);
                 if (shape.isEmpty()) continue;
 
-
+                //? if <1.21.2 {
                 WorldRenderer.drawShapeOutline(
                         matrices,
                         consumers.getBuffer(RenderLayer.getLines()),
@@ -82,7 +90,20 @@ public class ExcavatorsAndHammersClient implements ClientModInitializer {
                         0.0f, 0.0f, 0.0f, 0.4f,
                         true
                 );
+                //?} else {
+                /*DebugRenderer.drawVoxelShapeOutlines(
+                        matrices,
+                        consumers.getBuffer(RenderLayer.getLines()),
+                        shape,
+                        targetPos.getX() - camPos.x,
+                        targetPos.getY() - camPos.y,
+                        targetPos.getZ() - camPos.z,
+                        0.0f, 0.0f, 0.0f, 0.4f,
+                        true
+                );
+                *///?}
             }
         }
     }
+    //?}
 }
