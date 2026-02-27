@@ -8,6 +8,10 @@
     "excavatorsandhammers:diamond_hammer",
     "excavatorsandhammers:netherite_hammer",
     {
+      "id": "excavatorsandhammers:copper_hammer",
+      "required": false
+    },
+    {
       "id": "excavatorsandhammers:obsidian_hammer",
       "required": false
     }

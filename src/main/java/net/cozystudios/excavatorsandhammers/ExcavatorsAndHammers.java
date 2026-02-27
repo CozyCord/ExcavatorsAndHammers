@@ -1,5 +1,6 @@
 package net.cozystudios.excavatorsandhammers;
 
+import net.cozystudios.excavatorsandhammers.compat.CopperCompat;
 import net.cozystudios.excavatorsandhammers.compat.ObsidianCompat;
 import net.cozystudios.excavatorsandhammers.registry.ModItems;
 import net.cozystudios.excavatorsandhammers.util.LastBreakData;
@@ -37,6 +38,16 @@ public class ExcavatorsAndHammers implements ModInitializer {
 
 		ModItems.registerItems();
 
+		//? if <1.21.9 {
+		if (FabricLoader.getInstance().isModLoaded("copperagebackport")) {
+			CopperCompat.register();
+			LOGGER.info("Copper Age Backport detected! Registering copper excavator and hammer.");
+		}
+		//?} else {
+		/*CopperCompat.register();
+		LOGGER.info("Registering copper excavator and hammer.");
+		*///?}
+
 		if (FabricLoader.getInstance().isModLoaded("obsidianequipmentrework")) {
 			ObsidianCompat.register();
 			LOGGER.info("Obsidian Equipment Reworked detected! Registering obsidian excavator and hammer.");
@@ -56,6 +67,13 @@ public class ExcavatorsAndHammers implements ModInitializer {
 					.entries((displayContext, entries) -> {
 						entries.add(ModItems.WOODEN_EXCAVATOR);
 						entries.add(ModItems.STONE_EXCAVATOR);
+						//? if <1.21.9 {
+						if (CopperCompat.COPPER_EXCAVATOR != null) {
+							entries.add(CopperCompat.COPPER_EXCAVATOR);
+						}
+						//?} else {
+						/*entries.add(CopperCompat.COPPER_EXCAVATOR);
+						*///?}
 						entries.add(ModItems.IRON_EXCAVATOR);
 						entries.add(ModItems.GOLDEN_EXCAVATOR);
 						entries.add(ModItems.DIAMOND_EXCAVATOR);
@@ -65,6 +83,13 @@ public class ExcavatorsAndHammers implements ModInitializer {
 						entries.add(ModItems.NETHERITE_EXCAVATOR);
 						entries.add(ModItems.WOODEN_HAMMER);
 						entries.add(ModItems.STONE_HAMMER);
+						//? if <1.21.9 {
+						if (CopperCompat.COPPER_HAMMER != null) {
+							entries.add(CopperCompat.COPPER_HAMMER);
+						}
+						//?} else {
+						/*entries.add(CopperCompat.COPPER_HAMMER);
+						*///?}
 						entries.add(ModItems.IRON_HAMMER);
 						entries.add(ModItems.GOLDEN_HAMMER);
 						entries.add(ModItems.DIAMOND_HAMMER);
