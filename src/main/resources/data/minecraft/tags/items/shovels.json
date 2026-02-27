@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "excavatorsandhammers:wooden_excavator",
+    "excavatorsandhammers:stone_excavator",
+    "excavatorsandhammers:iron_excavator",
+    "excavatorsandhammers:golden_excavator",
+    "excavatorsandhammers:diamond_excavator",
+    "excavatorsandhammers:netherite_excavator",
+    {
+      "id": "excavatorsandhammers:obsidian_excavator",
+      "required": false
+    }
+  ]
+}
