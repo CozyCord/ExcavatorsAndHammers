@@ -117,7 +117,11 @@ public class ModToolMaterials {
 
     public static final ToolMaterial WOOD = new ToolMaterial(BlockTags.INCORRECT_FOR_WOODEN_TOOL, 250, 4.0f, 1.0f, 10, ItemTags.PLANKS);
     public static final ToolMaterial STONE = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, 600, 5.0f, 1.5f, 8, ItemTags.STONE_TOOL_MATERIALS);
+    //? if <1.21.9 {
     public static final ToolMaterial COPPER = new ToolMaterial(BlockTags.INCORRECT_FOR_STONE_TOOL, 900, 5.5f, 1.75f, 11, COPPER_REPAIR_MATERIALS);
+    //?} else {
+    public static final ToolMaterial COPPER = new ToolMaterial(BlockTags.INCORRECT_FOR_COPPER_TOOL, 900, 5.5f, 1.75f, 11, COPPER_REPAIR_MATERIALS);
+    //?}
     public static final ToolMaterial IRON = new ToolMaterial(BlockTags.INCORRECT_FOR_IRON_TOOL, 1250, 6.0f, 2.0f, 14, ItemTags.IRON_TOOL_MATERIALS);
     public static final ToolMaterial GOLD = new ToolMaterial(BlockTags.INCORRECT_FOR_GOLD_TOOL, 65, 12.0f, 1.0f, 4, ItemTags.GOLD_TOOL_MATERIALS);
     public static final ToolMaterial DIAMOND = new ToolMaterial(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 2850, 8.0f, 2.5f, 10, ItemTags.DIAMOND_TOOL_MATERIALS);
