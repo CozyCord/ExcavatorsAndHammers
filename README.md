@@ -1,8 +1,8 @@
 <h1 align="center">
-	Excavators and Hammers <br>
+	Tokimi's Toolshed <br>
 </h1>
 <p align="center">
-	<i>"A simple mod that adds Hammers and excavators to mine in a 3x3 area!"</i>
+	<i>"A simple mod that adds helpful and powerful tools to the game that feel left out of vanilla!"</i>
 </p>
 <h1 align="center">
 	<a href="https://ko-fi.com/tokimi"><img src="https://shields.io/badge/kofi-Buy_a_coffee-ff5f5f?logo=ko-fi&style=for-the-badgeKofi" alt="Kofi"></a>
@@ -17,7 +17,7 @@
       <a href="https://cozystudios.org/excavatorsandhammers/intro/">Read Wiki</a>
     </td>
     <td align="center" style="width: 33%;">
-      <a href="https://github.com/CozyCord/ExcavatorsAndHammers/issues">Report Issues / Make Feature Requests</a>
+      <a href="https://github.com/CozyCord/TokimisToolshed/issues">Report Issues / Make Feature Requests</a>
     </td>
   </tr>
 </table>
