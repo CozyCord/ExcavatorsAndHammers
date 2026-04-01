@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron_hammer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "items": "tokimistoolshed:iron_hammer" }]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tokimistoolshed:iron_hammer_smelting"
+      }
+    }
+  },
+  "requirements": [["has_iron_hammer", "has_the_recipe"]],
+  "rewards": {
+    "recipes": ["tokimistoolshed:iron_hammer_smelting"]
+  }
+}

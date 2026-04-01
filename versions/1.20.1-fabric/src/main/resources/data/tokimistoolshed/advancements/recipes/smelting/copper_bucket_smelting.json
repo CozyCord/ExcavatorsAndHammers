@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_copper_bucket": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "item": "tokimistoolshed:copper_bucket" }]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tokimistoolshed:copper_bucket_smelting"
+      }
+    }
+  },
+  "requirements": [["has_copper_bucket", "has_the_recipe"]],
+  "rewards": {
+    "recipes": ["tokimistoolshed:copper_bucket_smelting"]
+  }
+}

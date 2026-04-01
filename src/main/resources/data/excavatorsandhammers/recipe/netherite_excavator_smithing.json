@@ -1,7 +1,0 @@
-{
-  "type": "minecraft:smithing_transform",
-  "template": "minecraft:netherite_upgrade_smithing_template",
-  "base": "excavatorsandhammers:diamond_excavator",
-  "addition": "minecraft:netherite_ingot",
-  "result": { "id": "excavatorsandhammers:netherite_excavator" }
-}

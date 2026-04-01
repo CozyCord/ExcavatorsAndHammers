@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "tokimistoolshed:netherite_lumber_axe"
+  },
+  "result": "minecraft:netherite_scrap",
+  "experience": 0.1,
+  "cookingtime": 200
+}

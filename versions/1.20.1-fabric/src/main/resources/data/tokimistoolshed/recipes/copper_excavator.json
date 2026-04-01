@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " CC",
+    " SC",
+    "S  "
+  ],
+  "key": {
+    "C": { "item": "minecraft:copper_ingot" },
+    "S": { "item": "minecraft:stick" }
+  },
+  "result": { "item": "tokimistoolshed:copper_excavator" }
+}

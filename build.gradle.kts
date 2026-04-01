@@ -24,3 +24,15 @@ sourceSets {
         }
     }
 }
+
+tasks.processResources {
+    doLast {
+        val versionDataDir = file("src/main/resources/data")
+        if (versionDataDir.exists() && versionDataDir.isDirectory) {
+            copy {
+                from(versionDataDir)
+                into(layout.buildDirectory.dir("resources/main/data"))
+            }
+        }
+    }
+}

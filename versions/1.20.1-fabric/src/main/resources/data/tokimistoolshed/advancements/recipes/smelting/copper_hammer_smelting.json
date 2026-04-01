@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_copper_hammer": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "item": "tokimistoolshed:copper_hammer" }]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tokimistoolshed:copper_hammer_smelting"
+      }
+    }
+  },
+  "requirements": [["has_copper_hammer", "has_the_recipe"]],
+  "rewards": {
+    "recipes": ["tokimistoolshed:copper_hammer_smelting"]
+  }
+}

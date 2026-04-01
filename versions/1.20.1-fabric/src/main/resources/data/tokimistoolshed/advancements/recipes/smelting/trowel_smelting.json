@@ -1,0 +1,23 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_trowel": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "item": "tokimistoolshed:trowel" }]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tokimistoolshed:trowel_smelting"
+      }
+    }
+  },
+  "requirements": [
+    ["has_trowel", "has_the_recipe"]
+  ],
+  "rewards": {
+    "recipes": ["tokimistoolshed:trowel_smelting"]
+  }
+}

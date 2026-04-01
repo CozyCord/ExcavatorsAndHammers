@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "MS ",
+    " S "
+  ],
+  "key": {
+    "M": "minecraft:iron_ingot",
+    "S": "minecraft:stick"
+  },
+  "result": { "id": "tokimistoolshed:iron_scythe", "count": 1 }
+}

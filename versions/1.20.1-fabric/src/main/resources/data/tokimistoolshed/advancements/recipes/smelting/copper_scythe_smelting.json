@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_copper_scythe": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "item": "tokimistoolshed:copper_scythe" }]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tokimistoolshed:copper_scythe_smelting"
+      }
+    }
+  },
+  "requirements": [["has_copper_scythe", "has_the_recipe"]],
+  "rewards": {
+    "recipes": ["tokimistoolshed:copper_scythe_smelting"]
+  }
+}

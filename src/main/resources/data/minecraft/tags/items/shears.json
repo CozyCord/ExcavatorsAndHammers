@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "tokimistoolshed:wooden_clippers",
+    "tokimistoolshed:iron_clippers",
+    {
+      "id": "tokimistoolshed:copper_clippers",
+      "required": false
+    }
+  ]
+}

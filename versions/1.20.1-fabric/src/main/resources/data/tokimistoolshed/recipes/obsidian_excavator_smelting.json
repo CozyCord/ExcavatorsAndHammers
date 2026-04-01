@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "tokimistoolshed:obsidian_excavator"
+  },
+  "result": "obsidianequipmentrework:obsidian_ingot",
+  "experience": 0.1,
+  "cookingtime": 200
+}

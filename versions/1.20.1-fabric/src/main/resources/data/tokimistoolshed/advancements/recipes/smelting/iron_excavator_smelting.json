@@ -1,0 +1,21 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_iron_excavator": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "item": "tokimistoolshed:iron_excavator" }]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tokimistoolshed:iron_excavator_smelting"
+      }
+    }
+  },
+  "requirements": [["has_iron_excavator", "has_the_recipe"]],
+  "rewards": {
+    "recipes": ["tokimistoolshed:iron_excavator_smelting"]
+  }
+}

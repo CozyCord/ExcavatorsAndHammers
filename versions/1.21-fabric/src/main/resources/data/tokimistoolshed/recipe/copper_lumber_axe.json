@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MM ",
+    "MS ",
+    "S  "
+  ],
+  "key": {
+    "M": { "tag": "c:copper_ingots" },
+    "S": { "item": "minecraft:stick" }
+  },
+  "result": { "id": "tokimistoolshed:copper_lumber_axe", "count": 1 }
+}

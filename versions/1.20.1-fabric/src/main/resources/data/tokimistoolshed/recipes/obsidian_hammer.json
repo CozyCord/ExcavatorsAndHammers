@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "OOO",
+    "OSO",
+    " S "
+  ],
+  "key": {
+    "O": { "item": "obsidianequipmentrework:obsidian_ingot" },
+    "S": { "item": "minecraft:stick" }
+  },
+  "result": { "item": "tokimistoolshed:obsidian_hammer" }
+}

@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " MM",
+    "M M",
+    " M "
+  ],
+  "key": {
+    "M": { "tag": "minecraft:planks" }
+  },
+  "result": { "item": "tokimistoolshed:wooden_clippers", "count": 1 }
+}

@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tokimistoolshed:item/exposed_copper_bucket"
+  }
+}

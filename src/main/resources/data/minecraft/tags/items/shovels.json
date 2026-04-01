@@ -1,18 +1,18 @@
 {
   "replace": false,
   "values": [
-    "excavatorsandhammers:wooden_excavator",
-    "excavatorsandhammers:stone_excavator",
-    "excavatorsandhammers:iron_excavator",
-    "excavatorsandhammers:golden_excavator",
-    "excavatorsandhammers:diamond_excavator",
-    "excavatorsandhammers:netherite_excavator",
+    "tokimistoolshed:wooden_excavator",
+    "tokimistoolshed:stone_excavator",
+    "tokimistoolshed:iron_excavator",
+    "tokimistoolshed:golden_excavator",
+    "tokimistoolshed:diamond_excavator",
+    "tokimistoolshed:netherite_excavator",
     {
-      "id": "excavatorsandhammers:copper_excavator",
+      "id": "tokimistoolshed:copper_excavator",
       "required": false
     },
     {
-      "id": "excavatorsandhammers:obsidian_excavator",
+      "id": "tokimistoolshed:obsidian_excavator",
       "required": false
     }
   ]

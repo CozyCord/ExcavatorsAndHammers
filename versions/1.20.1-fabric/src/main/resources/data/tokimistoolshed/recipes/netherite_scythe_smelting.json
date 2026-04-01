@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "tokimistoolshed:netherite_scythe"
+  },
+  "result": "minecraft:netherite_scrap",
+  "experience": 0.1,
+  "cookingtime": 200
+}
