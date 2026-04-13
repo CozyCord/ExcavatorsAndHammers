@@ -8,5 +8,5 @@
   "key": {
     "M": { "item": "minecraft:iron_ingot" }
   },
-  "result": { "item": "tokimistoolshed:iron_clippers", "count": 1 }
+  "result": { "id": "tokimistoolshed:clippers", "count": 1 }
 }

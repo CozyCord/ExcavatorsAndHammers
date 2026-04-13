@@ -1,6 +1,6 @@
 {
   "type": "minecraft:smelting",
-  "ingredient": { "item": "tokimistoolshed:iron_clippers" },
+  "ingredient": { "item": "tokimistoolshed:clippers" },
   "result": { "id": "minecraft:iron_nugget", "count": 1 },
   "experience": 0.1,
   "cookingtime": 200

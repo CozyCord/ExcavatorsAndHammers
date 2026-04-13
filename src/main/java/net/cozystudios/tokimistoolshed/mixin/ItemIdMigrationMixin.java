@@ -14,9 +14,6 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-// 1.20.1: fromNbt(NbtCompound) -> ItemStack
-// 1.21-1.21.4: fromNbt(WrapperLookup, NbtElement) -> Optional<ItemStack>
-// 1.21.5+: fromNbt removed, NbtCompound API changed — handled by ItemIdMigrationNbtMixin
 @Mixin(ItemStack.class)
 public abstract class ItemIdMigrationMixin {
 
@@ -45,12 +42,20 @@ public abstract class ItemIdMigrationMixin {
         if (!nbt.contains("id", 8)) return;
 
         String id = nbt.getString("id");
-        if (!id.startsWith(OLD_NAMESPACE)) return;
+        String newId = null;
 
-        String newId = NEW_NAMESPACE + id.substring(OLD_NAMESPACE.length());
-        nbt.putString("id", newId);
+        if (id.startsWith(OLD_NAMESPACE)) {
+            newId = NEW_NAMESPACE + id.substring(OLD_NAMESPACE.length());
+        } else if (id.equals("tokimistoolshed:iron_clippers")
+                || id.equals("tokimistoolshed:wooden_clippers")
+                || id.equals("tokimistoolshed:copper_clippers")) {
+            newId = "tokimistoolshed:clippers";
+        }
 
-        TokimisToolshed.LOGGER.info("[TokimisToolshed] Migrated item {} -> {}", id, newId);
+        if (newId != null) {
+            nbt.putString("id", newId);
+            TokimisToolshed.LOGGER.info("[TokimisToolshed] Migrated item {} -> {}", id, newId);
+        }
     }
     //?}
 }

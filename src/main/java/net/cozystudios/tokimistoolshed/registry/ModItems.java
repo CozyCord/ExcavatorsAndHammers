@@ -64,8 +64,7 @@ public class ModItems {
     public static Item DIAMOND_LUMBER_AXE;
     public static Item NETHERITE_LUMBER_AXE;
 
-    public static Item WOODEN_CLIPPERS;
-    public static Item IRON_CLIPPERS;
+    public static Item CLIPPERS;
 
     public static Item COPPER_BUCKET;
     public static Item COPPER_WATER_BUCKET;
@@ -101,22 +100,21 @@ public class ModItems {
         DIAMOND_HAMMER = registerHammer("diamond_hammer", ModToolMaterials.DIAMOND, 2.5F, -3.2F, settings("diamond_hammer"));
         NETHERITE_HAMMER = registerHammer("netherite_hammer", ModToolMaterials.NETHERITE, 3.0F, -3.2F, settings("netherite_hammer").fireproof());
 
-        WOODEN_SCYTHE = registerScythe("wooden_scythe", ModToolMaterials.WOOD, 2.0F, -2.6F, settings("wooden_scythe"));
-        STONE_SCYTHE = registerScythe("stone_scythe", ModToolMaterials.STONE, 2.5F, -2.6F, settings("stone_scythe"));
-        IRON_SCYTHE = registerScythe("iron_scythe", ModToolMaterials.IRON, 3.0F, -2.6F, settings("iron_scythe"));
-        GOLDEN_SCYTHE = registerScythe("golden_scythe", ModToolMaterials.GOLD, 2.0F, -2.2F, settings("golden_scythe"));
-        DIAMOND_SCYTHE = registerScythe("diamond_scythe", ModToolMaterials.DIAMOND, 3.5F, -2.6F, settings("diamond_scythe"));
-        NETHERITE_SCYTHE = registerScythe("netherite_scythe", ModToolMaterials.NETHERITE, 4.0F, -2.6F, settings("netherite_scythe").fireproof());
+        WOODEN_SCYTHE = registerScythe("wooden_scythe", ModToolMaterials.WOOD, 5.0F, -2.6F, settings("wooden_scythe"));
+        STONE_SCYTHE = registerScythe("stone_scythe", ModToolMaterials.STONE, 6.0F, -2.6F, settings("stone_scythe"));
+        IRON_SCYTHE = registerScythe("iron_scythe", ModToolMaterials.IRON, 7.0F, -2.6F, settings("iron_scythe"));
+        GOLDEN_SCYTHE = registerScythe("golden_scythe", ModToolMaterials.GOLD, 5.0F, -2.6F, settings("golden_scythe"));
+        DIAMOND_SCYTHE = registerScythe("diamond_scythe", ModToolMaterials.DIAMOND, 8.0F, -2.6F, settings("diamond_scythe"));
+        NETHERITE_SCYTHE = registerScythe("netherite_scythe", ModToolMaterials.NETHERITE, 9.0F, -2.6F, settings("netherite_scythe").fireproof());
 
-        WOODEN_LUMBER_AXE = registerLumberAxe("wooden_lumber_axe", ModToolMaterials.WOOD, 6.0F, -3.2F, settings("wooden_lumber_axe"));
-        STONE_LUMBER_AXE = registerLumberAxe("stone_lumber_axe", ModToolMaterials.STONE, 7.0F, -3.2F, settings("stone_lumber_axe"));
-        IRON_LUMBER_AXE = registerLumberAxe("iron_lumber_axe", ModToolMaterials.IRON, 6.0F, -3.1F, settings("iron_lumber_axe"));
-        GOLDEN_LUMBER_AXE = registerLumberAxe("golden_lumber_axe", ModToolMaterials.GOLD, 6.0F, -3.0F, settings("golden_lumber_axe"));
-        DIAMOND_LUMBER_AXE = registerLumberAxe("diamond_lumber_axe", ModToolMaterials.DIAMOND, 5.0F, -3.0F, settings("diamond_lumber_axe"));
-        NETHERITE_LUMBER_AXE = registerLumberAxe("netherite_lumber_axe", ModToolMaterials.NETHERITE, 5.0F, -3.0F, settings("netherite_lumber_axe").fireproof());
+        WOODEN_LUMBER_AXE = registerLumberAxe("wooden_lumber_axe", ModToolMaterials.WOOD, 6.0F, -3.4F, settings("wooden_lumber_axe"));
+        STONE_LUMBER_AXE = registerLumberAxe("stone_lumber_axe", ModToolMaterials.STONE, 10.0F, -3.4F, settings("stone_lumber_axe"));
+        IRON_LUMBER_AXE = registerLumberAxe("iron_lumber_axe", ModToolMaterials.IRON, 10.0F, -3.3F, settings("iron_lumber_axe"));
+        GOLDEN_LUMBER_AXE = registerLumberAxe("golden_lumber_axe", ModToolMaterials.GOLD, 6.0F, -3.2F, settings("golden_lumber_axe"));
+        DIAMOND_LUMBER_AXE = registerLumberAxe("diamond_lumber_axe", ModToolMaterials.DIAMOND, 10.0F, -3.2F, settings("diamond_lumber_axe"));
+        NETHERITE_LUMBER_AXE = registerLumberAxe("netherite_lumber_axe", ModToolMaterials.NETHERITE, 11.0F, -3.2F, settings("netherite_lumber_axe").fireproof());
 
-        WOODEN_CLIPPERS = registerClippers("wooden_clippers", 150, settings("wooden_clippers"));
-        IRON_CLIPPERS = registerClippers("iron_clippers", 500, settings("iron_clippers"));
+        CLIPPERS = registerClippers("clippers", 500, settings("clippers"));
 
         COPPER_BUCKET = registerBucket("copper_bucket",
                 new CopperBucketItem(Fluids.EMPTY,
@@ -232,14 +230,12 @@ public class ModItems {
         registry.add(WOODEN_HAMMER, 300);
         registry.add(WOODEN_SCYTHE, 300);
         registry.add(WOODEN_LUMBER_AXE, 300);
-        registry.add(WOODEN_CLIPPERS, 200);
         //?} else {
         /*FuelRegistryEvents.BUILD.register((builder, context) -> {
             builder.add(WOODEN_EXCAVATOR, 300);
             builder.add(WOODEN_HAMMER, 300);
             builder.add(WOODEN_SCYTHE, 300);
             builder.add(WOODEN_LUMBER_AXE, 300);
-            builder.add(WOODEN_CLIPPERS, 200);
         });
         *///?}
     }

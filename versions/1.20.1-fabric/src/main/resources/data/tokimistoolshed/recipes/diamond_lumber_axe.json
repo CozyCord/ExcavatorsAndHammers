@@ -1,9 +1,9 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "MM ",
-    "MS ",
-    "S  "
+    "MMM",
+    "MMS",
+    " S "
   ],
   "key": {
     "M": { "item": "minecraft:diamond" },

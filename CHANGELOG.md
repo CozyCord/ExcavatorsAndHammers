@@ -1,24 +1,11 @@
-# v1.0 - Tokimi's Toolshed
+# v1.1 - Tokimi's Toolshed
 
-## Rebranded
-- **Excavators & Hammers** has been fully rebranded to **Tokimi's Toolshed**.
-- Mod ID changed from `excavatorsandhammers` to `tokimistoolshed`.
-- All package directories, class names, and resources have been migrated to the new namespace.
-- Built-in item migration automatically converts old `excavatorsandhammers:` items to `tokimistoolshed:` on world load — all enchantments, durability, custom names, and NBT data are preserved.
-
-## Added
-- **Scythes** — 3x3 hoe that harvests crops and breaks grass in a wide area. Also functions as a weapon.
-- **Lumber Axes** — Tree felling axes that chop entire trees in one swing with accelerated leaf decay and proper drop sounds.
-- **Clippers** — 3x3 shears for breaking leaves, wool, and other shearable blocks in a wide area.
-- **Copper Bucket** — A budget bucket with 16 uses before breaking. Works exactly like a vanilla bucket (fluids, cauldrons, dispensers, milking). Tooltip dynamically shows remaining uses.
-- **Trowel** — Right-click to place a random block from your hotbar.
-- **Abacus** — Measures X, Y, and Z distances between two points, displayed on your HUD.
-
-## Fixed
-- Iron Excavator smelting recipe.
-- Recipes on 1.21+.
-- All multi-block tools now work in Creative mode.
-
-## Art
-- Brand new textures for Excavators and Hammers.
-- All new tool textures by **Ryukusu**.
+## Changed
+- Removed wooden and copper clippers. Renamed iron clippers to just "Clippers".
+- Old wooden/copper/iron clippers are automatically migrated to the new Clippers item, preserving enchantments and durability.
+- Lumber axe crafting recipe changed to a new shape (3 material top row, 2 material + stick middle, stick bottom center).
+- Rebalanced all tool durabilities: Wood 144, Stone 324, Copper 477, Iron 621, Gold 81, Diamond 3906, Netherite 5076.
+- Rebalanced mining speeds: Wood 2.0, Stone 4.0, Copper 5.0 (previously 4.0, 5.0, 5.5).
+- Rebalanced scythe attack damage across all tiers (Wood 5, Stone 6, Copper 6, Iron 7, Gold 5, Diamond 8, Netherite 9).
+- Rebalanced lumber axe attack damage and speed across all tiers (slower but heavier hits).
+- Added Better Combat compatibility — Lumber Axes are two-handed when Better Combat is installed.

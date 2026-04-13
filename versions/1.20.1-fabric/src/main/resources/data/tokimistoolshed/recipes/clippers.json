@@ -6,7 +6,7 @@
     " M "
   ],
   "key": {
-    "M": "#minecraft:planks"
+    "M": { "item": "minecraft:iron_ingot" }
   },
-  "result": { "id": "tokimistoolshed:wooden_clippers", "count": 1 }
+  "result": { "item": "tokimistoolshed:clippers", "count": 1 }
 }

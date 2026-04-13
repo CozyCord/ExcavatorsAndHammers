@@ -3,7 +3,6 @@ package net.cozystudios.tokimistoolshed.compat;
 import net.cozystudios.tokimistoolshed.TokimisToolshed;
 import net.cozystudios.tokimistoolshed.item.ExcavatorItem;
 import net.cozystudios.tokimistoolshed.item.HammerItem;
-import net.cozystudios.tokimistoolshed.item.ClippersItem;
 import net.cozystudios.tokimistoolshed.item.LumberAxeItem;
 import net.cozystudios.tokimistoolshed.item.ScytheItem;
 import net.cozystudios.tokimistoolshed.item.ModToolMaterials;
@@ -26,7 +25,6 @@ public class CopperCompat {
     public static Item COPPER_HAMMER;
     public static Item COPPER_SCYTHE;
     public static Item COPPER_LUMBER_AXE;
-    public static Item COPPER_CLIPPERS;
 
     private static Item.Settings settings(String name) {
         //? if >=1.21.2 {
@@ -45,7 +43,7 @@ public class CopperCompat {
                 //?} else {
                 /*Identifier.of(TokimisToolshed.MOD_ID, "copper_excavator"),
                 *///?}
-                new ExcavatorItem(ModToolMaterials.COPPER, 1.75F, -3.0F, settings("copper_excavator"))
+                new ExcavatorItem(ModToolMaterials.COPPER, 4.0F, -3.0F, settings("copper_excavator"))
         );
 
         COPPER_HAMMER = Registry.register(
@@ -65,7 +63,7 @@ public class CopperCompat {
                 //?} else {
                 /*Identifier.of(TokimisToolshed.MOD_ID, "copper_scythe"),
                 *///?}
-                new ScytheItem(ModToolMaterials.COPPER, 2.75F, -2.6F, settings("copper_scythe"))
+                new ScytheItem(ModToolMaterials.COPPER, 6.0F, -2.6F, settings("copper_scythe"))
         );
 
         COPPER_LUMBER_AXE = Registry.register(
@@ -75,17 +73,8 @@ public class CopperCompat {
                 //?} else {
                 /*Identifier.of(TokimisToolshed.MOD_ID, "copper_lumber_axe"),
                 *///?}
-                new LumberAxeItem(ModToolMaterials.COPPER, 6.5F, -3.1F, settings("copper_lumber_axe"))
+                new LumberAxeItem(ModToolMaterials.COPPER, 10.0F, -3.4F, settings("copper_lumber_axe"))
         );
 
-        COPPER_CLIPPERS = Registry.register(
-                Registries.ITEM,
-                //? if <1.21 {
-                new Identifier(TokimisToolshed.MOD_ID, "copper_clippers"),
-                //?} else {
-                /*Identifier.of(TokimisToolshed.MOD_ID, "copper_clippers"),
-                *///?}
-                new ClippersItem(350, settings("copper_clippers"))
-        );
     }
 }

@@ -6,13 +6,13 @@ import net.minecraft.recipe.Ingredient;
 import net.minecraft.item.Items;
 
 public enum ModToolMaterials implements ToolMaterial {
-    WOOD(250, 4.0f, 1.0f, 0, 10, Ingredient.ofItems(Items.OAK_PLANKS)),
-    STONE(600, 5.0f, 1.5f, 1, 8, Ingredient.ofItems(Items.COBBLESTONE)),
-    COPPER(900, 5.5f, 1.75f, 1, 11, Ingredient.ofItems(Items.COPPER_INGOT)),
-    IRON(1250, 6.0f, 2.0f, 2, 14, Ingredient.ofItems(Items.IRON_INGOT)),
-    GOLD(65, 12.0f, 1.0f, 1, 4, Ingredient.ofItems(Items.GOLD_INGOT)),
-    DIAMOND(2850, 8.0f, 2.5f, 3, 10, Ingredient.ofItems(Items.DIAMOND)),
-    NETHERITE(6500, 9.0f, 3.0f, 4, 15, Ingredient.ofItems(Items.NETHERITE_INGOT)),
+    WOOD(144, 2.0f, 1.0f, 0, 10, Ingredient.ofItems(Items.OAK_PLANKS)),
+    STONE(324, 4.0f, 1.5f, 1, 8, Ingredient.ofItems(Items.COBBLESTONE)),
+    COPPER(477, 5.0f, 1.75f, 1, 11, Ingredient.ofItems(Items.COPPER_INGOT)),
+    IRON(621, 6.0f, 2.0f, 2, 14, Ingredient.ofItems(Items.IRON_INGOT)),
+    GOLD(81, 12.0f, 1.0f, 1, 4, Ingredient.ofItems(Items.GOLD_INGOT)),
+    DIAMOND(3906, 8.0f, 2.5f, 3, 10, Ingredient.ofItems(Items.DIAMOND)),
+    NETHERITE(5076, 9.0f, 3.0f, 4, 15, Ingredient.ofItems(Items.NETHERITE_INGOT)),
     OBSIDIAN(4000, 8.5f, 2.75f, 4, 12, Ingredient.ofItems(Items.OBSIDIAN));
 
     private final int durability;

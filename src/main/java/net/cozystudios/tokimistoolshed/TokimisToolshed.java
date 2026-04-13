@@ -150,15 +150,7 @@ public class TokimisToolshed implements ModInitializer {
 							entries.add(ObsidianCompat.OBSIDIAN_LUMBER_AXE);
 						}
 						entries.add(ModItems.NETHERITE_LUMBER_AXE);
-						entries.add(ModItems.WOODEN_CLIPPERS);
-						//? if <1.21.9 {
-						if (CopperCompat.COPPER_CLIPPERS != null) {
-							entries.add(CopperCompat.COPPER_CLIPPERS);
-						}
-						//?} else {
-						/*entries.add(CopperCompat.COPPER_CLIPPERS);
-						*///?}
-						entries.add(ModItems.IRON_CLIPPERS);
+						entries.add(ModItems.CLIPPERS);
 						entries.add(ModItems.COPPER_BUCKET);
 						entries.add(ModItems.COPPER_WATER_BUCKET);
 						entries.add(ModItems.COPPER_LAVA_BUCKET);
