@@ -38,6 +38,8 @@ import net.minecraft.util.shape.VoxelShapes;
 
 public class AbacusOutlineRenderer {
 
+    private static final int MAX_AXIS_LENGTH = 128;
+
     public static void register() {
         //? if <1.21.11 {
         WorldRenderEvents.AFTER_TRANSLUCENT.register(AbacusOutlineRenderer::render);
@@ -88,62 +90,60 @@ public class AbacusOutlineRenderer {
 
         if (consumers == null) return;
 
-        //? if <1.21.11 {
+        int clampedTargetX = Math.max(boundPos.getX() - MAX_AXIS_LENGTH + 1, Math.min(targetPos.getX(), boundPos.getX() + MAX_AXIS_LENGTH - 1));
+        int clampedTargetY = Math.max(boundPos.getY() - MAX_AXIS_LENGTH + 1, Math.min(targetPos.getY(), boundPos.getY() + MAX_AXIS_LENGTH - 1));
+        int clampedTargetZ = Math.max(boundPos.getZ() - MAX_AXIS_LENGTH + 1, Math.min(targetPos.getZ(), boundPos.getZ() + MAX_AXIS_LENGTH - 1));
+
+        int minX = Math.min(boundPos.getX(), clampedTargetX);
+        int maxX = Math.max(boundPos.getX(), clampedTargetX);
+        int minY = Math.min(boundPos.getY(), clampedTargetY);
+        int maxY = Math.max(boundPos.getY(), clampedTargetY);
+        int minZ = Math.min(boundPos.getZ(), clampedTargetZ);
+        int maxZ = Math.max(boundPos.getZ(), clampedTargetZ);
+
+        int sizeX = maxX - minX + 1;
+        int sizeY = maxY - minY + 1;
+        int sizeZ = maxZ - minZ + 1;
+
+        VoxelShape box = VoxelShapes.cuboid(0, 0, 0, sizeX, sizeY, sizeZ);
+
+        //? if <1.21.2 {
         RenderSystem.lineWidth(3.0f);
-        //?}
-
-        int minX = Math.min(boundPos.getX(), targetPos.getX());
-        int maxX = Math.max(boundPos.getX(), targetPos.getX());
-        int minY = Math.min(boundPos.getY(), targetPos.getY());
-        int maxY = Math.max(boundPos.getY(), targetPos.getY());
-        int minZ = Math.min(boundPos.getZ(), targetPos.getZ());
-        int maxZ = Math.max(boundPos.getZ(), targetPos.getZ());
-
-        VoxelShape fullCube = VoxelShapes.fullCube();
-
-        for (int x = minX; x <= maxX; x++) {
-            for (int y = minY; y <= maxY; y++) {
-                for (int z = minZ; z <= maxZ; z++) {
-                    //? if <1.21.2 {
-                    WorldRenderer.drawShapeOutline(
-                            matrices,
-                            consumers.getBuffer(RenderLayer.getLines()),
-                            fullCube,
-                            x - camPos.x,
-                            y - camPos.y,
-                            z - camPos.z,
-                            1.0f, 0.65f, 0.0f, 1.0f,
-                            true
-                    );
-                    //?} elif <1.21.11 {
-                    /*DebugRenderer.drawVoxelShapeOutlines(
-                            matrices,
-                            consumers.getBuffer(RenderLayer.getLines()),
-                            fullCube,
-                            x - camPos.x,
-                            y - camPos.y,
-                            z - camPos.z,
-                            1.0f, 0.65f, 0.0f, 1.0f,
-                            true
-                    );
-                    *///?} else {
-                    /*VertexRendering.drawOutline(
-                            matrices,
-                            consumers.getBuffer(RenderLayers.LINES),
-                            fullCube,
-                            x - camPos.x,
-                            y - camPos.y,
-                            z - camPos.z,
-                            0xFFFFA600,
-                            3.0f
-                    );
-                    *///?}
-                }
-            }
-        }
-
-        //? if <1.21.11 {
+        WorldRenderer.drawShapeOutline(
+                matrices,
+                consumers.getBuffer(RenderLayer.getLines()),
+                box,
+                minX - camPos.x,
+                minY - camPos.y,
+                minZ - camPos.z,
+                1.0f, 0.65f, 0.0f, 1.0f,
+                true
+        );
         RenderSystem.lineWidth(1.0f);
-        //?}
+        //?} elif <1.21.11 {
+        /*RenderSystem.lineWidth(3.0f);
+        DebugRenderer.drawVoxelShapeOutlines(
+                matrices,
+                consumers.getBuffer(RenderLayer.getLines()),
+                box,
+                minX - camPos.x,
+                minY - camPos.y,
+                minZ - camPos.z,
+                1.0f, 0.65f, 0.0f, 1.0f,
+                true
+        );
+        RenderSystem.lineWidth(1.0f);
+        *///?} else {
+        /*VertexRendering.drawOutline(
+                matrices,
+                consumers.getBuffer(RenderLayers.LINES),
+                box,
+                minX - camPos.x,
+                minY - camPos.y,
+                minZ - camPos.z,
+                0xFFFFA600,
+                3.0f
+        );
+        *///?}
     }
 }

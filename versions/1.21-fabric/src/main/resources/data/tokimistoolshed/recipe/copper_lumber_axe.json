@@ -6,7 +6,7 @@
     " S "
   ],
   "key": {
-    "M": { "tag": "c:copper_ingots" },
+    "M": { "item": "minecraft:copper_ingot" },
     "S": { "item": "minecraft:stick" }
   },
   "result": { "id": "tokimistoolshed:copper_lumber_axe", "count": 1 }

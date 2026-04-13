@@ -6,7 +6,7 @@
     " S "
   ],
   "key": {
-    "M": "#c:copper_ingots",
+    "M": "minecraft:copper_ingot",
     "S": "minecraft:stick"
   },
   "result": { "id": "tokimistoolshed:copper_lumber_axe", "count": 1 }

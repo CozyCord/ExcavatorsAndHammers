@@ -13,6 +13,8 @@ import net.minecraft.util.math.BlockPos;
 
 public class AbacusHudRenderer {
 
+    private static final int MAX_AXIS_LENGTH = 128;
+
     public static void register() {
         HudRenderCallback.EVENT.register((drawContext, unused) -> renderHud(drawContext));
     }
@@ -35,9 +37,9 @@ public class AbacusHudRenderer {
         int distance = AbacusItem.getDistance(abacusStack, targetPos);
         if (distance < 0) return;
 
-        int dx = Math.abs(targetPos.getX() - boundPos.getX());
-        int dy = Math.abs(targetPos.getY() - boundPos.getY());
-        int dz = Math.abs(targetPos.getZ() - boundPos.getZ());
+        int dx = Math.min(Math.abs(targetPos.getX() - boundPos.getX()), MAX_AXIS_LENGTH - 1);
+        int dy = Math.min(Math.abs(targetPos.getY() - boundPos.getY()), MAX_AXIS_LENGTH - 1);
+        int dz = Math.min(Math.abs(targetPos.getZ() - boundPos.getZ()), MAX_AXIS_LENGTH - 1);
 
         int screenWidth = client.getWindow().getScaledWidth();
         int screenHeight = client.getWindow().getScaledHeight();
