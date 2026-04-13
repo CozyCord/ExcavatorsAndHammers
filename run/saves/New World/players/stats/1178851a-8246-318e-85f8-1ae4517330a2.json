@@ -1,0 +1,21 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:sprint_one_cm": 2896,
+      "minecraft:time_since_rest": 1085,
+      "minecraft:walk_one_cm": 1968,
+      "minecraft:total_world_time": 1092,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 24727,
+      "minecraft:crouch_one_cm": 14,
+      "minecraft:sneak_time": 53,
+      "minecraft:play_time": 1085,
+      "minecraft:jump": 15,
+      "minecraft:time_since_death": 1085
+    },
+    "minecraft:used": {
+      "tokimistoolshed:abacus": 2
+    }
+  },
+  "DataVersion": 4786
+}

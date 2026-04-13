@@ -1,0 +1,23 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_obsidian_ingot": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "items": "obsidianequipmentrework:obsidian_ingot" }]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tokimistoolshed:obsidian_lumber_axe"
+      }
+    }
+  },
+  "requirements": [
+    ["has_obsidian_ingot", "has_the_recipe"]
+  ],
+  "rewards": {
+    "recipes": ["tokimistoolshed:obsidian_lumber_axe"]
+  }
+}

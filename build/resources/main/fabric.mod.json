@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "tokimistoolshed",
+	"version": "1.1",
+	"name": "Tokimi's Toolshed",
+	"description": "Tokimi's Toolshed adds a variety of new multi-block tools to enhance your mining and gathering experience!",
+	"authors": [
+		"Tokimi",
+		"CozyStudios"
+	],
+	"contact": {
+		"homepage": "https://discord.gg/cozycord",
+		"sources": "https://github.com/CozyCord/TokimisToolshed",
+		"issues": "https://github.com/CozyCord/TokimisToolshed/issues"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/tokimistoolshed/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.cozystudios.tokimistoolshed.TokimisToolshed"
+		],
+		"client": [
+			"net.cozystudios.tokimistoolshed.TokimisToolshedClient"
+		]
+	},
+	"accessWidener": "tokimistoolshed.accesswidener",
+	"mixins": [
+		"tokimistoolshed.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.18.6",
+		"minecraft": "~26.1",
+		"java": ">=25",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"obsidianequipmentrework": "*"
+	}
+}

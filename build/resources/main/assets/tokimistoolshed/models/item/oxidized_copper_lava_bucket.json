@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "tokimistoolshed:item/oxidized_copper_lava_bucket"
+  }
+}

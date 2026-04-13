@@ -1,0 +1,23 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_abacus": {
+      "trigger": "minecraft:inventory_changed",
+      "conditions": {
+        "items": [{ "items": "tokimistoolshed:abacus" }]
+      }
+    },
+    "has_the_recipe": {
+      "trigger": "minecraft:recipe_unlocked",
+      "conditions": {
+        "recipe": "tokimistoolshed:abacus_smelting"
+      }
+    }
+  },
+  "requirements": [
+    ["has_abacus", "has_the_recipe"]
+  ],
+  "rewards": {
+    "recipes": ["tokimistoolshed:abacus_smelting"]
+  }
+}

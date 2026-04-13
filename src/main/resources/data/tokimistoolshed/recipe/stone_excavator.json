@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    " CC",
+    " SC",
+    "S  "
+  ],
+  "key": {
+    "C": "#minecraft:stone_tool_materials",
+    "S": "minecraft:stick"
+  },
+  "result": { "id": "tokimistoolshed:stone_excavator", "count": 1 }
+}

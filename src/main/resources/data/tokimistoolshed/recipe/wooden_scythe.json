@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "MMM",
+    "MS ",
+    " S "
+  ],
+  "key": {
+    "M": "#minecraft:planks",
+    "S": "minecraft:stick"
+  },
+  "result": { "id": "tokimistoolshed:wooden_scythe", "count": 1 }
+}

@@ -1,0 +1,26 @@
+{
+  "stats": {
+    "minecraft:custom": {
+      "minecraft:interact_with_crafting_table": 1,
+      "minecraft:sprint_one_cm": 786,
+      "minecraft:time_since_rest": 1536,
+      "minecraft:walk_one_cm": 5626,
+      "minecraft:total_world_time": 1545,
+      "minecraft:leave_game": 1,
+      "minecraft:fly_one_cm": 23033,
+      "minecraft:crouch_one_cm": 168,
+      "minecraft:sneak_time": 97,
+      "minecraft:play_time": 1536,
+      "minecraft:jump": 13,
+      "minecraft:time_since_death": 1536
+    },
+    "minecraft:used": {
+      "minecraft:crafting_table": 1,
+      "tokimistoolshed:abacus": 2
+    },
+    "minecraft:crafted": {
+      "tokimistoolshed:copper_lumber_axe": 1
+    }
+  },
+  "DataVersion": 4786
+}
